@@ -1,0 +1,9 @@
+
+.food-heading {
+  background-color: aqua;
+  display: flex;
+  justify-content: center; /* horizontal */
+  padding: 6px 12px;
+}
+
+
