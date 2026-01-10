@@ -4,7 +4,7 @@ const Item = ({ foodItems }) => {
   // console.log(styles); /* for debuging */
 
   //   let { foodItems } = props; /*  destructuring  */
-  return <li className={`${styles["kg-item"]} `}>{foodItems}</li>;
+  return <li className={`${styles["kg-item"]} list-group-item `}>{foodItems}</li>;
 };
 
 export default Item;
