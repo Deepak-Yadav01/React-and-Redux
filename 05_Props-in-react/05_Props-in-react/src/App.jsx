@@ -3,6 +3,7 @@ import ErrorMsg from "./Components/ErrorMsg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Container from "./Components/Container";
+import FoodInput from "./Components/FoodInput";
 
 function App() {
   let foodItems = ["apple", "mango", "Milk", "orange", "Ghee", "Dal", "Banana"];
@@ -14,6 +15,7 @@ function App() {
     <Container>
       <Container>hii</Container>
       <h1 className="text-center fw-bold my-4 food-heading">Healthy Food</h1>
+       <FoodInput></FoodInput>
       <ErrorMsg items={foodItems}></ErrorMsg>
       <FoodItems items={foodItems}></FoodItems>
     </Container>
