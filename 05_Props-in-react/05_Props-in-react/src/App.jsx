@@ -4,16 +4,33 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Container from "./Components/Container";
 import FoodInput from "./Components/FoodInput";
+import { useState } from "react";
 
 function App() {
   let foodItems = ["apple", "mango", "Milk", "orange", "Ghee", "Dal", "Banana"];
 
-  let textToShow = "Text enterd by User";
+  // let textStateArr = useState();
+  // let textStateVal = textStateArr[0];
+  // let setTextStateMethod = textStateArr[1];
+
+  
+  // let textStateArr = useState("Text Enterd by User Here");
+  // let textToShow = textStateArr[0];
+  // let setTextState = textStateArr[1];
+
+// destructured  method of usestate
+
+    let [textToShow, setTextState] =useState("Text Enterd by User Here")
+  console.log(`Current value of textToShow : ${textToShow}`);
+  
+
+
+  // let textToShow = "Text enterd by User";
 
   // let foodItems = [];
     const handleOnChange = () => {
         console.log(event.target.value);
-        textToShow = event.target.value;
+        setTextState(event.target.value);
     }
 
   return (
