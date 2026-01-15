@@ -8,14 +8,21 @@ import FoodInput from "./Components/FoodInput";
 function App() {
   let foodItems = ["apple", "mango", "Milk", "orange", "Ghee", "Dal", "Banana"];
 
+  let textToShow = "Text enterd by User";
+
   // let foodItems = [];
+    const handleOnChange = () => {
+        console.log(event.target.value);
+        textToShow = event.target.value;
+    }
 
   return (
     <>
     <Container>
       <Container>hii</Container>
       <h1 className="text-center fw-bold my-4 food-heading">Healthy Food</h1>
-       <FoodInput></FoodInput>
+       <FoodInput handleOnChange={handleOnChange}></FoodInput>
+       <p>{textToShow}</p>
       <ErrorMsg items={foodItems}></ErrorMsg>
       <FoodItems items={foodItems}></FoodItems>
     </Container>
